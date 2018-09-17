@@ -13,7 +13,7 @@ import ExportExcel from 'ac-export-excel';
 当前导出组件，不依赖任何后台接口，仅是前端的导出下载功能。使用new ActiveXObject("Excel.Application") 功能 实现下载功能
 
 
-##效果  [预览]() 
+## 效果  [预览](https://tinper-acs.github.io/ac-export-excel) 
  
  ![](media/15371866256103/15371866280681.jpg)
 
