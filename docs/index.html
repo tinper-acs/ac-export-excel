@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title></title>
+    <title>ac-export-excel</title>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/bootstrap-responsive.css"/>
     <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css"/>
@@ -14,10 +14,61 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="span3"><ul class="nav nav-list">
+    <li class="sidebar-header-2"><a href="#ac-export-excel">ac-export-excel</a></li>
+    <li class="sidebar-header-2"><a href="#描述">描述</a></li>
+    <li class="sidebar-header-2"><a href="#api">API</a></li>
+    <li class="sidebar-header-2"><a href="#开发调试">开发调试</a></li>
 </ul>
       </div>
-      <div class="span9 main"><p>### </p>
-      </div>
+      <div class="span9 main"><h2 id="ac-export-excel">ac-export-excel</h2>
+<pre class="hljs"><code>$ ynpm <span class="hljs-keyword">install</span> ac-<span class="hljs-keyword">export</span>-excel <span class="hljs-comment">--save</span>
+
+引入
+
+<span class="hljs-keyword">import</span> ExportExcel <span class="hljs-keyword">from</span> <span class="hljs-string">'ac-export-excel'</span>;
+</code></pre><h2 id="描述">描述</h2>
+<p>当前导出组件，不依赖任何后台接口，仅是前端的导出下载功能。使用new ActiveXObject(&quot;Excel.Application&quot;) 功能 实现下载功能</p>
+<p>##效果  <a href="">预览</a> </p>
+<p> <img src="media/15371866256103/15371866280681.jpg" alt=""></p>
+<p class="img-container"><img src="media/15371866256103/15371868201223.jpg" alt=""></p>
+<h2 id="api">API</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:right">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:center">dom 结构的ID</td>
+<td style="text-align:center">string</td>
+<td style="text-align:right">必填项</td>
+</tr>
+<tr>
+<td style="text-align:left">className</td>
+<td style="text-align:center">当前组件全局样式</td>
+<td style="text-align:center">string</td>
+<td style="text-align:right">--</td>
+</tr>
+<tr>
+<td style="text-align:left">children</td>
+<td style="text-align:center">自定义内容</td>
+<td style="text-align:center">element</td>
+<td style="text-align:right">--</td>
+</tr>
+</tbody>
+</table>
+<h2 id="开发调试">开发调试</h2>
+<pre class="hljs"><code>$ <span class="hljs-built_in">cd</span> ac-export-excel
+
+$ npm install
+
+$ npm run dev
+</code></pre>      </div>
     </div>
   </div>
 
