@@ -88,5 +88,7 @@
     "bee-button": "^1.0.6",
     "bee-icon": "^1.0.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bee-form": "^2.0.6"
+  }
 }

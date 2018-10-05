@@ -1,11 +1,11 @@
 /**
  *
- * @title table 中导出使用案例
- * @description 在table中直接导出表格内容为excel，table 目前不支持直接设置Id属性。
+ * @title table 导出使用案例
+ * @description 在table直接导出表格内容为excel，table 目前不支持直接设置Id属性。
  */
 
-import React, { Component } from 'react';
-import { Table, Tooltip, Button,Icon } from 'tinper-bee';
+import React, {Component} from 'react';
+import {Table, Tooltip, Button, Icon} from 'tinper-bee';
 import ExportExcel from '../../src/index';
 
 
@@ -27,15 +27,15 @@ const columns = [
       );
     }
   },
-  { id: "123", title: "性别", dataIndex: "b", key: "b", width: 100 },
-  { title: "年龄", dataIndex: "c", key: "c", width: 200 },
+  {id: "123", title: "性别", dataIndex: "b", key: "b", width: 100},
+  {title: "年龄", dataIndex: "c", key: "c", width: 200},
   {
     title: "操作",
     dataIndex: "d",
     key: "d",
     render(text, record, index) {
       return (
-        <div style={{ position: 'relative' }} title={text} >
+        <div style={{position: 'relative'}} title={text}>
           <a
             href="javascript:;"
             tooltip={text}
@@ -44,7 +44,7 @@ const columns = [
             }}
           >
             一些操作
-              </a>
+          </a>
         </div>
       );
     }
@@ -52,34 +52,33 @@ const columns = [
 ];
 
 const data = [
-  { a: "令狐冲", b: "男", c: 41, d: "操作", key: "1" },
-  { a: "杨过叔叔的女儿黄蓉", b: "男", c: 67, d: "操作", key: "2" },
-  { a: "郭靖", b: "男", c: 25, d: "操作", key: "3" }
+  {a: "令狐冲", b: "男", c: 41, d: "操作", key: "1"},
+  {a: "杨过叔叔的女儿黄蓉", b: "男", c: 67, d: "操作", key: "2"},
+  {a: "郭靖", b: "男", c: 25, d: "操作", key: "3"}
 ];
 
 class Demo1 extends Component {
-    render () {
-        return (
-            <div className="demoPadding">
-                <ExportExcel tableId="paginationTableId" container={this.paginationTableIdRef}>
-                  <Button><Icon type="uf-download" />导出</Button>
-                </ExportExcel>
+  render() {
+    return (
+      <div className="demoPadding">
+        <ExportExcel tableId="paginationTableId" container={this.paginationTableIdRef}>
+          <Button><Icon type="uf-download"/>导出</Button>
+        </ExportExcel>
 
-                <div id="paginationTableId">
-                  <Table ref={c => this.paginationTableIdRef = c}
-                    
-                      columns={columns}
-                      data={data}
-                      onRowClick={(record, index, indent) => {
-                      this.setState({
-                          selectedRowIndex: index
-                      });
-                      }}
-                  />
-                </div>
-            </div>
-        )
-    }
+        <div id="paginationTableId">
+          <Table ref={c => this.paginationTableIdRef = c}
+                 columns={columns}
+                 data={data}
+                 onRowClick={(record, index, indent) => {
+                   this.setState({
+                     selectedRowIndex: index
+                   });
+                 }}
+          />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Demo1;
